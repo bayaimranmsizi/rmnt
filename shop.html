@@ -1,0 +1,224 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>RMNT | Shop</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
+<link rel="apple-touch-icon" sizes="180x180" href="images/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="images/favicon-16x16.png">
+<link rel="manifest" href="/site.webmanifest">
+	
+<meta name="description" content="Explore RMNT’s motorsport-inspired apparel, including hoodies, tees, outerwear, and limited drops.">
+<meta property="og:title" content="RMNT Shop – Motorsport Apparel">
+<meta property="og:description" content="Limited drops and race-inspired apparel designed for movement.">
+<meta property="og:url" content="https://rmnt.netlify.app/shop.html">
+  <link href="css/shop_page.css" rel="stylesheet" type="text/css">
+</head>
+	
+<body>
+<header class="navbar">
+    <div class="logo">
+    <a href="homepage.html">
+      <img src="images/Asset 21.png" alt="RMNT Logo">
+    </a>
+  </div>
+
+  <!-- Desktop Nav -->
+  <nav class="nav-links">
+    <a href="homepage.html">Home</a>
+    <a href="shop.html">Shop</a>
+    <a href="about.html">About</a>
+    <a href="partners.html">Partners</a>
+    <a href="contact.html">Contact</a>
+  </nav>
+
+  <!-- Mobile Hamburger -->
+  <div class="mobile-menu-icon" onclick="toggleMenu()">☰</div>
+</header>
+
+<!-- MOBILE SLIDE MENU -->
+<div id="mobileMenu" class="mobile-menu">
+  <span class="close-btn" onclick="toggleMenu()">×</span>
+
+  <nav class="mobile-nav-links">
+    <a href="homepage.html">Home</a>
+    <a href="shop.html">Shop</a>
+    <a href="about.html">About</a>
+    <a href="partners.html">Partners</a>
+    <a href="contact.html">Contact</a>
+  </nav>
+
+  <div class="mobile-social">
+    <a href="#"><img src="images/icon-instagram.svg" alt=""></a>
+    <a href="#"><img src="images/icon-twitter.svg" alt=""></a>
+    <a href="#"><img src="images/icon-youtube.svg" alt=""></a>
+  </div>
+</div>
+
+<!-- MAIN -->
+<main class="shop-page">
+
+  <h1 class="shop-title">All Collections</h1>
+
+  <!-- FILTERS -->
+  <div class="shop-filters">
+    <button class="filter-btn active" onclick="filterProducts('all')">All</button>
+    <button class="filter-btn" onclick="filterProducts('hoodies')">Hoodies</button>
+    <button class="filter-btn" onclick="filterProducts('tees')">Tees</button>
+    <button class="filter-btn" onclick="filterProducts('outerwear')">Outerwear</button>
+  </div>
+
+  <!-- PRODUCT GRID -->
+  <section class="shop-grid">
+
+    <!-- PRODUCT -->
+    <div class="product-card" data-category="hoodies">
+      <div class="product-image-wrapper">
+        <img src="images/RMNT Free Back View Hoodie Mockup.jpg" alt="Off-Road Hoodie">
+
+        <a href="product-offroad-hoodie.html" class="quick-view">Quick View</a>
+
+        <button class="add-to-cart" onclick="addToCart('Off-Road Hoodie', 849)">
+          Add to Cart
+        </button>
+      </div>
+
+      <div class="product-details">
+        <h2>Off-Road Hoodie</h2>
+        <p>R849</p>
+
+        <div class="color-dots">
+          <span class="dot red"></span>
+          <span class="dot tan"></span>
+          <span class="dot black"></span>
+        </div>
+      </div>
+    </div>
+	  
+    <div class="product-card" data-category="hoodies">
+      <div class="product-image-wrapper">
+        <img src="images/hoodie rmnt.jpg" alt="ready set go Hoodie">
+
+        <a href="product-offroad-hoodie.html" class="quick-view">Quick View</a>
+
+        <button class="add-to-cart" onclick="addToCart('Ready Set Go Hoodie', 849)">
+          Add to Cart
+        </button>
+      </div>
+
+      <div class="product-details">
+        <h2>RSG Urban Utility Hoodie</h2>
+        <p>R849</p>
+
+        <div class="color-dots">
+          <span class="dot tan"></span>
+          <span class="dot black"></span>
+        </div>
+      </div>
+    </div>
+
+    <!-- PRODUCT -->
+    <div class="product-card" data-category="tees">
+      <div class="product-image-wrapper">
+        <img src="images/RMNT Free T-Shirt on Street Mockup.jpg" alt="GT3 Exploration Jacket">
+
+        <a href="product-winter-jacket.html" class="quick-view">Quick View</a>
+
+        <button class="add-to-cart disabled" disabled>Sold Out</button>
+        <span class="sold-out">Sold Out</span>
+      </div>
+
+      <div class="product-details">
+        <h2>GT3 Exploration Tee</h2>
+        <p>R299</p>
+      </div>
+    </div>
+
+    <!-- PRODUCT -->
+    <div class="product-card" data-category="tees">
+      <div class="product-image-wrapper">
+        <img src="images/RMNT Free Men Back Turned T-Shirt PSD Mockup.jpg" alt="Dune Tee - Sand">
+
+        <a href="product-dune-tee.html" class="quick-view">Quick View</a>
+
+        <button class="add-to-cart" onclick="addToCart('Dune Tee', 599)">
+          Add to Cart
+        </button>
+      </div>
+
+      <div class="product-details">
+        <h2>Dune Tee – Sand</h2>
+        <p>R599</p>
+
+        <div class="color-dots">
+          <span class="dot red"></span>
+          <span class="dot black"></span>
+        </div>
+      </div>
+    </div>
+	  
+    <div class="product-card" data-category="outerwear">
+      <div class="product-image-wrapper">
+        <img src="images/1of1 Tote bag.jpg" alt="Tote Bag">
+
+        <a href="product-dune-tee.html" class="quick-view">Quick View</a>
+
+        <button class="add-to-cart" onclick="addToCart('Dune Tee', 599)">
+          Add to Cart
+        </button>
+      </div>
+
+      <div class="product-details">
+        <h2>1 of 1 livery Mercedes Tote bag</h2>
+        <p>R599</p>
+
+        <div class="color-dots">
+          <span class="dot red"></span>
+          <span class="dot black"></span>
+        </div>
+      </div>
+    </div>
+
+  </section>
+
+</main>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <p>&copy; 2025 RMNT. Designed for motion.</p>
+</footer>
+
+<!-- JS -->
+<script>
+function toggleMenu() {
+  const menu = document.getElementById("mobileMenu");
+  menu.classList.toggle("active");
+  document.body.style.overflow = menu.classList.contains("active") ? "hidden" : "";
+}
+
+function filterProducts(category) {
+  const cards = document.querySelectorAll(".product-card");
+  const buttons = document.querySelectorAll(".filter-btn");
+
+  buttons.forEach(btn => btn.classList.remove("active"));
+  event.target.classList.add("active");
+
+  cards.forEach(card => {
+    card.style.display =
+      category === "all" || card.dataset.category === category
+        ? "block"
+        : "none";
+  });
+}
+
+function addToCart(name, price) {
+  alert(name + " added to cart – R" + price);
+}
+</script>
+
+	
+
+</body>
+</html>

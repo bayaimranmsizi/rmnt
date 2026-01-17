@@ -1,0 +1,193 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>About | RMNT</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700&family=Inter:wght@400;500&display=swap" rel="stylesheet">
+<link rel="apple-touch-icon" sizes="180x180" href="images/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="images/favicon-16x16.png">
+<link rel="manifest" href="/site.webmanifest">
+	
+<meta name="description" content="RMNT is a creative automotive lifestyle brand merging motorsport heritage with contemporary design and culture.">
+
+<meta property="og:title" content="About RMNT">
+<meta property="og:description" content="Built for drivers. Designed for culture. Discover the story behind RMNT.">
+<meta property="og:url" content="https://rmnt.netlify.app/about.html">
+	
+	<link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+<link href="css/about_page.css" rel="stylesheet" type="text/css">
+</head>
+
+<body>
+<header class="navbar">
+    <div class="logo">
+    <a href="homepage.html">
+      <img src="images/Asset 21.png" alt="RMNT Logo">
+    </a>
+  </div>
+
+  <nav class="nav-links">
+    <a href="homepage.html">Home</a>
+    <a href="shop.html">Shop</a>
+    <a href="about.html" class="active">About</a>
+    <a href="partners.html">Partners</a>
+    <a href="contact.html">Contact</a>
+  </nav>
+
+  <div class="mobile-menu-icon" onclick="toggleMenu()">☰</div>
+</header>
+
+<div id="mobileMenu" class="mobile-menu">
+  <div class="menu-header">
+    <span class="close-btn" onclick="toggleMenu()">×</span>
+  </div>
+
+  <nav class="mobile-nav-links">
+    <a href="homepage.html">Home</a>
+    <a href="shop.html">Shop</a>
+    <a href="about.html">About</a>
+    <a href="partners.html">Partners</a>
+    <a href="contact.html">Contact</a>
+  </nav>
+
+  <div class="mobile-social">
+    <a href="#"><img src="images/icon-instagram.svg" alt="Instagram"></a>
+    <a href="#"><img src="images/icon-twitter.svg" alt="Twitter"></a>
+    <a href="#"><img src="images/icon-youtube.svg" alt="YouTube"></a>
+  </div>
+</div>
+
+<!-- HERO -->
+<section class="hero-banner" data-aos="fade-up">
+  <img src="images/Le Mans Night AMGGT3.jpg" alt="RMNT Motorsport Visual">
+</section>
+
+<!-- INTRO -->
+<section class="about-intro" data-aos="fade-up">
+  <h1>Built for Drivers. Designed for Culture.</h1>
+  <p>
+    RMNT is a creative automotive lifestyle brand blending motorsport heritage,
+    contemporary design, and modern culture. Inspired by speed. Created for motion.
+  </p>
+</section>
+
+<!-- SPLIT SECTION -->
+<section class="about-split">
+  <div class="split-text" data-aos="fade-right">
+    <h2>We Are RMNT</h2>
+    <p>
+      Born in the garage and built on grit, RMNT is more than racing.
+      It’s a mindset shaped by movement, sound, and relentless progression.
+    </p>
+  </div>
+
+  <div class="split-text" data-aos="fade-left">
+    <h2>Creative Garage</h2>
+    <p>
+      Operating as both a creative agency and apparel label,
+      RMNT collaborates with artists, drivers, and disruptors
+      to craft authentic, design-led collections and media.
+    </p>
+  </div>
+</section>
+
+<!-- FULL IMAGE -->
+<section class="about-full-image" data-aos="zoom-in">
+  <img src="images/Pitstop night GT3.jpg" alt="Behind the scenes">
+</section>
+
+<!-- CULTURE -->
+<section class="about-culture" data-aos="fade-up">
+  <h2>Driven by Detail. United by Motion.</h2>
+  <p>
+    From limited drops to custom creative projects,
+    RMNT reflects the future of racing, media, and design.
+    We exist to move culture forward.
+  </p>
+</section>
+
+<!-- STATS -->
+<section class="stats-section">
+  <div class="stats-grid">
+    <div class="stat-box">
+      <span class="counter" data-target="25">0</span>
+      <p>Apparel Drops</p>
+    </div>
+    <div class="stat-box">
+      <span class="counter" data-target="10">0</span>
+      <p>Brand Collaborations</p>
+    </div>
+    <div class="stat-box">
+      <span class="counter" data-target="5000">0</span>
+      <p>Community Members</p>
+    </div>
+    <div class="stat-box">
+      <span class="counter" data-target="3">0</span>
+      <p>Years in Motion</p>
+    </div>
+  </div>
+</section>
+
+<footer class="footer">
+  <p>&copy; 2025 RMNT. Designed for motion.</p>
+</footer>
+
+<!-- JS -->
+<script>
+function toggleMenu() {
+  const menu = document.getElementById("mobileMenu");
+  menu.classList.toggle("active");
+  document.body.style.overflow = menu.classList.contains("active") ? "hidden" : "";
+}
+
+// Counter animation
+const counters = document.querySelectorAll(".counter");
+let counterStarted = false;
+
+window.addEventListener("scroll", () => {
+  const stats = document.querySelector(".stats-section");
+  if (!stats) return;
+
+  const top = stats.getBoundingClientRect().top;
+  if (top < window.innerHeight && !counterStarted) {
+    counters.forEach(counter => {
+      const target = +counter.dataset.target;
+      let count = 0;
+      const step = Math.ceil(target / 100);
+
+      const update = () => {
+        count += step;
+        if (count < target) {
+          counter.innerText = count;
+          requestAnimationFrame(update);
+        } else {
+          counter.innerText = target;
+        }
+      };
+      update();
+    });
+    counterStarted = true;
+  }
+});
+</script>
+
+<script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+<script>
+  AOS.init({ duration: 800, easing: "ease-in-out", once: true });
+</script>
+	
+<script>
+function toggleMenu() {
+  const menu = document.getElementById("mobileMenu");
+  menu.classList.toggle("active");
+
+  document.body.style.overflow =
+    menu.classList.contains("active") ? "hidden" : "";
+}
+</script>
+
+</body>
+</html>
+

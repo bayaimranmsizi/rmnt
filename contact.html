@@ -1,0 +1,108 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<meta name="description" content="Get in touch with RMNT for collaborations, creative projects, or brand partnerships.">
+
+<meta property="og:title" content="Contact RMNT">
+<meta property="og:description" content="Let’s build something together. Connect with RMNT.">
+<meta property="og:url" content="https://rmnt.netlify.app/contact.html">
+
+<title>RMNT | Contact</title>
+	
+<link rel="apple-touch-icon" sizes="180x180" href="images/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="images/favicon-16x16.png">
+<link rel="manifest" href="/site.webmanifest">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+<link href="css/contact_page.css" rel="stylesheet" type="text/css">
+</head>
+
+<body>
+<header class="navbar">
+    <div class="logo">
+    <a href="homepage.html">
+      <img src="images/Asset 21.png" alt="RMNT Logo">
+    </a>
+  </div>
+
+  <nav class="nav-links">
+    <a href="homepage.html">Home</a>
+    <a href="shop.html">Shop</a>
+    <a href="about.html">About</a>
+    <a href="partners.html">Partners</a>
+    <a href="contact.html">Contact</a>
+  </nav>
+
+  <!-- Mobile Hamburger -->
+  <div class="mobile-menu-icon" onclick="toggleMenu()">☰</div>
+</header>
+
+<!-- MOBILE MENU (IDENTICAL ACROSS SITE) -->
+<div id="mobileMenu" class="mobile-menu">
+  <div class="menu-header">
+    <span class="close-btn" onclick="toggleMenu()">×</span>
+  </div>
+
+  <nav class="mobile-nav-links">
+    <a href="homepage.html">Home</a>
+    <a href="shop.html">Shop</a>
+    <a href="about.html">About</a>
+    <a href="partners.html">Partners</a>
+    <a href="contact.html">Contact</a>
+  </nav>
+
+  <div class="mobile-social">
+    <a href="#"><img src="images/icon-instagram.svg" alt="Instagram"></a>
+    <a href="#"><img src="images/icon-twitter.svg" alt="Twitter"></a>
+    <a href="#"><img src="images/icon-youtube.svg" alt="YouTube"></a>
+  </div>
+</div>
+
+<!-- HERO -->
+<section class="contact-hero" data-aos="fade-in">
+  <div class="hero-overlay">
+    <h1>Let’s Build Something Together</h1>
+  </div>
+</section>
+
+<!-- CONTENT -->
+<section class="contact-content">
+  <div class="contact-form" data-aos="fade-right">
+    <h2>Send a Message</h2>
+    <form>
+      <input type="text" placeholder="Full Name" required>
+      <input type="email" placeholder="Email Address" required>
+      <input type="text" placeholder="Subject">
+      <textarea rows="6" placeholder="Your Message..." required></textarea>
+      <button type="submit">Send Message</button>
+    </form>
+  </div>
+
+  <div class="contact-details" data-aos="fade-left">
+    <h2>Connect with Us</h2>
+    <p><strong>Email:</strong> hello@rmnt.agency</p>
+    <p><strong>Phone:</strong> +27 63 063 7061</p>
+    <p><strong>Location:</strong> Johannesburg | Cape Town | Global</p>
+  </div>
+</section>
+
+<footer class="footer">
+  <p>&copy; 2025 RMNT. Designed for motion.</p>
+</footer>
+
+<!-- SCRIPTS -->
+<script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+<script>
+  AOS.init({ duration: 900, once: true });
+
+  function toggleMenu() {
+    const menu = document.getElementById("mobileMenu");
+    menu.classList.toggle("active");
+    document.body.style.overflow = menu.classList.contains("active") ? "hidden" : "";
+  }
+</script>
+
+</body>
+</html>

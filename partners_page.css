@@ -1,0 +1,210 @@
+@charset "utf-8";
+body {
+  margin: 0;
+  font-family: 'Inter', sans-serif;
+  background-color: #ffffff;
+  color: #111;
+}
+
+/* NAVBAR */
+.navbar {
+  background-color: #f5e3d0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 18px 40px;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+}
+
+/* Clickable logo */
+.logo a {
+  display: inline-flex;
+  align-items: center;
+}
+
+/* Logo image */
+.logo img {
+  height: 36px;          /* 🔥 Adjust once, works everywhere */
+  width: auto;
+  display: block;
+}
+
+.nav-links a {
+  text-decoration: none;
+  margin-left: 25px;
+  font-weight: 500;
+  color: #1b1b1b;
+}
+
+.nav-links a:hover {
+  color: #a60000;
+}
+
+/* HERO */
+.partners-hero {
+  background-image: url("../images/spanightGT3.jpg");
+  background-size: cover;
+  background-position: center;
+  height: 500px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.hero-text h1 {
+  font-family: 'Space Grotesk', sans-serif;
+  color: #fff;
+  font-size: 48px;
+}
+
+.hero-text p {
+  color: #ddd;
+  font-size: 18px;
+  margin-top: 10px;
+}
+
+/* INTRO */
+.intro-text {
+  max-width: 900px;
+  margin: 70px auto;
+  text-align: center;
+  padding: 0 20px;
+}
+
+.intro-text h2 {
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 26px;
+  color: #222;
+}
+
+/* BRAND GRID */
+.brands-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 50px;
+  padding: 70px 40px;
+  background-color: #f9f9f9;
+}
+
+.brand-logo img {
+  width: 100%;
+  max-width: 160px;
+  margin: auto;
+  display: block;
+  filter: grayscale(100%);
+  transition: filter 0.3s ease;
+}
+
+.brand-logo img:hover {
+  filter: grayscale(0%);
+}
+
+/* CTA */
+.cta-section {
+  background-color: #111;
+  color: white;
+  text-align: center;
+  padding: 80px 20px;
+}
+
+.cta-section h2 {
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 28px;
+  margin-bottom: 20px;
+}
+
+.cta-btn {
+  background-color: #a60000;
+  color: white;
+  padding: 12px 28px;
+  border-radius: 30px;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.cta-btn:hover {
+  background-color: #8e0000;
+}
+
+/* FOOTER */
+.footer {
+  background-color: #000;
+  color: #ccc;
+  text-align: center;
+  padding: 20px;
+  font-size: 14px;
+}
+
+/* MOBILE MENU (SHARED) */
+.mobile-menu-icon {
+  display: none;
+  font-size: 28px;
+  cursor: pointer;
+  color: #a60000;
+}
+
+.mobile-menu {
+  position: fixed;
+  top: 0;
+  left: -100%;
+  width: 80%;
+  height: 100%;
+  background-color: #a60000;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  transition: left 0.3s ease;
+  z-index: 9999;
+}
+
+.mobile-menu.active {
+  left: 0;
+}
+
+.menu-header {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.close-btn {
+  font-size: 30px;
+  cursor: pointer;
+  color: white;
+}
+
+.mobile-nav-links {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.mobile-nav-links a {
+  color: white;
+  font-weight: bold;
+  font-size: 20px;
+  text-decoration: none;
+}
+
+.mobile-social {
+  display: flex;
+  gap: 15px;
+}
+
+.mobile-social img {
+  width: 28px;
+}
+
+/* MOBILE */
+@media (max-width: 768px) {
+  .nav-links { display: none; }
+  .mobile-menu-icon { display: block; }
+}

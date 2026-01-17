@@ -1,0 +1,266 @@
+@charset "utf-8";
+/* Font Setup */
+body {
+  font-family: 'Inter', sans-serif;
+  background-color: #ffffff;
+  margin: 0;
+  color: #111;
+}
+
+/* NAVBAR */
+.navbar {
+  background: #f5e3d0;
+  padding: 18px 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+}
+
+/* Clickable logo */
+.logo a {
+  display: inline-flex;
+  align-items: center;
+}
+
+/* Logo image */
+.logo img {
+  height: 36px;          
+  width: auto;
+  display: block;
+}
+
+.nav-links a {
+  margin-left: 25px;
+  text-decoration: none;
+  color: #111;
+  font-weight: 500;
+}
+
+.nav-links a:hover {
+  color: #a60000;
+}
+
+/* MOBILE MENU */
+.mobile-menu-icon {
+  display: none;
+  font-size: 28px;
+  cursor: pointer;
+  color: #a60000;
+}
+
+.mobile-menu {
+  position: fixed;
+  top: 0;
+  left: -100%;
+  width: 80%;
+  height: 100%;
+  background: #a60000;
+  padding: 25px;
+  color: #fff;
+  transition: left 0.3s ease;
+  z-index: 9999;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.mobile-menu.active {
+  left: 0;
+}
+
+.close-btn {
+  font-size: 32px;
+  cursor: pointer;
+  align-self: flex-end;
+}
+
+.mobile-nav-links {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.mobile-nav-links a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.mobile-social img {
+  width: 26px;
+}
+
+/* SHOP */
+.shop-title {
+  font-family: 'Space Grotesk', sans-serif;
+  text-align: center;
+  font-size: 36px;
+  margin: 40px 0;
+}
+
+.shop-filters {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.filter-btn {
+  border: 2px solid #a60000;
+  background: transparent;
+  color: #a60000;
+  padding: 8px 16px;
+  margin: 0 6px;
+  border-radius: 20px;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.filter-btn.active,
+.filter-btn:hover {
+  background: #a60000;
+  color: #fff;
+}
+
+/* GRID */
+.shop-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 40px;
+  padding: 0 40px 80px;
+}
+
+.product-card {
+  border: 1px solid #eee;
+  padding: 20px;
+  transition: box-shadow 0.3s;
+}
+
+.product-card:hover {
+  box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+}
+
+/* IMAGE */
+.product-image-wrapper {
+  position: relative;
+  overflow: hidden;
+  border-radius: 8px;
+}
+
+.product-image-wrapper img {
+  width: 100%;
+  transition: transform 0.4s;
+}
+
+.product-card:hover img {
+  transform: scale(1.05);
+}
+
+/* QUICK VIEW */
+.quick-view {
+  position: absolute;
+  bottom: 12px;
+  left: 12px;
+  background: rgba(0,0,0,0.75);
+  color: #fff;
+  padding: 6px 10px;
+  font-size: 12px;
+  text-decoration: none;
+  opacity: 0;
+}
+
+.product-card:hover .quick-view {
+  opacity: 1;
+}
+
+/* ADD TO CART */
+.add-to-cart {
+  position: absolute;
+  bottom: 12px;
+  right: 12px;
+  background: #174c3c;
+  color: #fff;
+  border: none;
+  padding: 8px 14px;
+  border-radius: 6px;
+  cursor: pointer;
+  opacity: 0;
+}
+
+.product-card:hover .add-to-cart {
+  opacity: 1;
+}
+
+.add-to-cart.disabled {
+  background: #777;
+  cursor: not-allowed;
+  opacity: 1;
+}
+
+/* SOLD OUT */
+.sold-out {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  background: #a60000;
+  color: #fff;
+  padding: 4px 8px;
+  font-size: 12px;
+}
+
+/* DETAILS */
+.product-details {
+  text-align: center;
+  margin-top: 12px;
+}
+
+.product-details h2 {
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 18px;
+}
+
+.product-details p {
+  color: #666;
+  font-size: 14px;
+}
+
+/* COLORS */
+.color-dots {
+  display: flex;
+  justify-content: center;
+  gap: 6px;
+  margin-top: 6px;
+}
+
+.dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  border: 1px solid #ccc;
+}
+
+.dot.red { background: #a60000; }
+.dot.tan { background: #f5e3d0; }
+.dot.black { background: #111; }
+
+/* FOOTER */
+.footer {
+  background: #111;
+  color: #ccc;
+  text-align: center;
+  padding: 20px;
+  font-size: 14px;
+}
+
+/* MOBILE */
+@media (max-width: 768px) {
+  .nav-links { display: none; }
+  .mobile-menu-icon { display: block; }
+}

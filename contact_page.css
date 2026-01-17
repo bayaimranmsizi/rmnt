@@ -1,0 +1,161 @@
+@charset "utf-8";
+body {
+  font-family: 'Inter', sans-serif;
+  margin: 0;
+  background-color: #fff;
+  color: #111;
+}
+
+
+/* NAVBAR */
+.navbar {
+  background-color: #f5e3d0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 18px 40px;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.logo img {
+  height: 36px;
+  width: auto;
+}
+
+/* Desktop nav */
+.nav-links a {
+  text-decoration: none;
+  margin-left: 25px;
+  font-weight: 500;
+  color: #1b1b1b;
+}
+
+.nav-links a:hover {
+  color: #a60000;
+}
+
+/* HERO */
+.contact-hero {
+  background: url("../images/IMG-20240514-WA0007.jpg") center/cover no-repeat;
+  height: 450px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.hero-overlay {
+  background: rgba(0,0,0,0.6);
+  padding: 60px;
+  color: #fff;
+}
+
+.hero-overlay h1 {
+  font-size: 42px;
+}
+
+/* CONTENT */
+.contact-content {
+  display: flex;
+  gap: 60px;
+  padding: 80px 40px;
+  flex-wrap: wrap;
+}
+
+.contact-form,
+.contact-details {
+  flex: 1;
+  min-width: 300px;
+}
+
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  padding: 14px;
+  margin-bottom: 20px;
+  border: 1px solid #ccc;
+}
+
+.contact-form button {
+  background: #a60000;
+  color: #fff;
+  padding: 12px 24px;
+  border-radius: 30px;
+  border: none;
+  font-weight: bold;
+}
+
+/* FOOTER */
+.footer {
+  background: #111;
+  color: #ccc;
+  text-align: center;
+  padding: 20px;
+}
+
+/* MOBILE MENU (SHARED) */
+.mobile-menu-icon {
+  display: none;
+  font-size: 28px;
+  cursor: pointer;
+  color: #a60000;
+}
+
+.mobile-menu {
+  position: fixed;
+  top: 0;
+  left: -100%;
+  width: 80%;
+  height: 100%;
+  background-color: #a60000;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  transition: left 0.3s ease;
+  z-index: 9999;
+}
+
+.mobile-menu.active {
+  left: 0;
+}
+
+.menu-header {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.close-btn {
+  font-size: 30px;
+  cursor: pointer;
+  color: white;
+}
+
+.mobile-nav-links {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.mobile-nav-links a {
+  color: white;
+  font-weight: bold;
+  font-size: 20px;
+  text-decoration: none;
+}
+
+.mobile-social {
+  display: flex;
+  gap: 15px;
+}
+
+.mobile-social img {
+  width: 28px;
+}
+
+/* MOBILE */
+@media (max-width: 768px) {
+  .nav-links { display: none; }
+  .mobile-menu-icon { display: block; }
+}
